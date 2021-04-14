@@ -9,19 +9,20 @@
       rel="stylesheet">
     <style>      
         .navbar {
+            position: relative;
             background:rgb(255, 255, 255);
             grid-column: 1 / 4;
             height: 50px;
             display: grid;
             grid-area: nav;
             grid-template-columns: auto 1fr auto auto auto auto;
-            grid-gap: 10px;
+            grid-gap: 20px;
             align-items: center;
-            padding-left: 20px;
-            padding-right: 20px;  
+            /* top right bottom left */
+            padding: 0px 20px 0px 20px;    
         }
-/* 
-            #jedna {
+
+            /* #jedna {
                 background:rgb(255, 201, 249);
                 justify-self: center;
             }
@@ -29,13 +30,35 @@
             #dva {
                 background:rgb(233, 239, 255);
                 
-            } */
+            }
+             */
+            #appsicon:hover {
+                background-color: #eee;
+                border-radius: 50%;
+                padding: 7px;
+                margin: -7px;
+                
+            }
+
+            #appsicon {
+                justify-self: center;
+                font-size: 25px;
+                margin-top: 4px;
+                /* justify-self: center;
+                align-self: center; */
+            }
+
+            #profilepic {
+                border-radius: 50%;
+                margin-top: 7px;
+            }
 
         .logo {
             background: rgb(255, 255, 255);
             grid-area: logo;
             min-height: 100px;
             justify-self: center;
+            transform: scale(0.3)
         }
 
         .search {
@@ -113,7 +136,8 @@
             grid-template-columns: auto auto 1fr auto auto auto;
             grid-gap: 10px;
             align-items: center;
-            padding: 10px 20px 20px 20px;    
+            /* top right bottom left */
+            padding: 0px 20px 0px 20px;    
         }
 /* 
             #fjedna {
@@ -130,6 +154,12 @@
                 background:LightPink;
                 justify-self: ;
             } */
+    
+        
+        .link:hover {
+            /* color: hotpink; */
+            text-decoration: underline;
+        }
 
         .container {
             position: fixed;
@@ -147,7 +177,7 @@
             background:#ffffff;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 20% auto 40px 1fr auto;
+            grid-template-rows: 7% 33% 40px 1fr auto;
             grid-gap: 10px;
             grid-template-areas:
                 "nav nav nav"
@@ -162,15 +192,22 @@
   <body>
   <div class="container">
     <div class="navbar">
-        <div id="jedna">About</div>
-        <div id="dva">Store</div>
-        <div>Gmail</div>
-        <div>Images</div>
-        <div>Menu</div>
-        <div>Button</div>
+        <div id="jedna">Home</div>
+        <div id="dva" class="link">Store</div>
+        <div class="link">Gmail</div>
+        <div class="link">Images</div>
+        <div class="link">
+            <i id="appsicon"" class="material-icons">apps</i>
+            <div class="circle"></div>
+        </div>
+        <a href="https://github.com/OndrejDrapalik">
+            <div class="link">
+                <img class="profilepic" id="profilepic" src="images/git-profile-pic.png" alt="Profile Picture">
+            </div>
+        </a>
     </div>
     <div class="logo">
-        <img class="logopic" id="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+        <img class="logopic" id="logo" src="images/google-logo.svg" alt="Google Logo">
     </div>
     
     <div class="search">
@@ -182,12 +219,12 @@
         <button class="buttons" type="button">I'm Feeling Lucky!</button>
     </div>
     <div class="footer">
-        <div id="fjedna">Advertising</div>
-        <div id="fdva">Business</div>
-        <div>How Search Works</div>
-        <div id="fctyri">Privacy</div>
-        <div>Terms</div>
-        <div>Settings</div>
+        <div id="fjedna" class="link">Advertising</div>
+        <div id="fdva" class="link">Business</div>
+        <div class="link">How Search Works</div>
+        <div id="fctyri" class="link">Privacy</div>
+        <div class="link">Terms</div>
+        <div class="link">Settings</div>
     </div>
     
 
