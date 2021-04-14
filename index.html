@@ -1,21 +1,122 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
-    <link rel="stylesheet" href="/Users/ondrovo/Documents/GitHub/the_odin_project/google-homepage/style.css">
-  </head>
+    <title>Google</title>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <style>      
+        .navbar {
+            /* background:PaleTurquoise; */
+            grid-column: 1 / 4;
+            height: 50px;
+            display: grid;
+            grid-area: nav;
+            grid-template-columns: 50px 1fr 50px 50px 50px 50px;
+            align-items: center;
+        }
+
+            #jedna {
+                background:rgb(255, 201, 249);
+                justify-self: center;
+            }
+
+            #dva {
+                background:rgb(233, 239, 255);
+                
+            }
+
+        .logo {
+            background: rgb(255, 255, 255);
+            grid-area: logo;
+            min-height: 100px;
+            justify-self: center;
+        }
+      
+        .search {
+            background:rgb(234, 225, 255);
+            grid-area: search;
+            justify-self: center;
+            min-height: 30px;
+        } 
+
+        .button {
+            grid-area: button;
+            background: rgb(223, 255, 223);
+            justify-self: center;
+        }
+
+        .footer {
+            background:rgb(255, 227, 216);
+            display: grid;
+            grid-column: 4 / 4;
+            grid-area: footer;
+            height: 50px;
+            grid-template-columns: 50px 50px 1fr 50px 50px 50px ;
+            align-items: center;            
+        }
+
+            #fjedna {
+                background:LightPink;
+                justify-self: center;
+            }
+
+
+        .container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            font-size: 14px;
+            min-height: 400px;
+            width: 100%;
+            /* height: 100vh;             */
+            background: rgb(255, 255, 255);
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 200px auto 20px 1fr auto;
+            grid-gap: 10px;
+            grid-template-areas:
+                "nav nav nav"
+                "logo logo logo"
+                "search search search"
+                "button button button"
+                "footer footer footer";
+            }
+    
+      </style>
+</head>
   <body>
-  <section class="section">
-    <div class="container">
-      <h1 class="title">
-        Hello World
-      </h1>
-      <p class="subtitle">
-        My first website with <strong>Bulma</strong>!
-      </p>
+  <div class="container">
+    <div class="navbar">
+        <div id="jedna">About</div>
+        <div id="dva">Store</div>
+        <div>Gmail</div>
+        <div>Images</div>
+        <div>Menu</div>
+        <div>Button</div>
     </div>
-  </section>
+    <div class="logo">
+        <img class="logopic" id="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+    </div>
+    
+    <div class="search">
+        <input type="text" class="searchTerm">
+    </div>
+    <div class="button">
+        <button type="button">Click Me!</button>
+        <button type="button">Click Me!</button>
+    </div>
+    <div class="footer">
+        <div id="fjedna">item1</div>
+        <div>item2</div>
+        <div>item3</div>
+        <div>item4</div>
+        <div>item5</div>
+        <div>item6</div>
+    </div>
+    
+
   </body>
 </html>   

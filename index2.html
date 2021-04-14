@@ -1,0 +1,38 @@
+<style>
+    .item1{background:LightSkyBlue;}
+    .item2{background:LightSalmon;}
+    .item3{background:PaleTurquoise;}
+    .item4{background:LightPink;}
+  
+    .item5 {
+      background: PaleGreen;
+      grid-area: content;
+      justify-self: center;
+   
+    }
+  
+    .container {
+      font-size: 40px;
+      min-height: 300px;
+      width: 100%;
+      background: LightGray;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-gap: 10px;
+      grid-template-areas:
+        "header header header"
+        "advert content content"
+        "footer footer footer";
+    }
+  </style>
+  
+  <div class="container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item5">
+        <img class="logo" id="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+    </div>
+    
+  </div>
